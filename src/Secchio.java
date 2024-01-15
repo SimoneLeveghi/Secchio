@@ -7,7 +7,7 @@ public class Secchio implements Cloneable, Comparable<Secchio>, Serializable {
     private double capacita;
 
     public Secchio(double volume, double capacita) throws Exception{
-        if(volume <= 0 || capacita <= 0) throw new Exception("Valori non validi");
+        if((volume <= 0 || capacita <= 0) || volume > capacita) throw new Exception("Valori non validi");
         this.volume = volume;
         this.capacita = capacita;
     }
@@ -34,7 +34,9 @@ public class Secchio implements Cloneable, Comparable<Secchio>, Serializable {
     }
 
     public double riempi() {
+        double ret = volume;
         this.volume = this.capacita;
+        return this.capacita - ret;
     }
 
     public double riempi(double qty) {
@@ -71,6 +73,7 @@ public class Secchio implements Cloneable, Comparable<Secchio>, Serializable {
 
     @Override
     public int compareTo(Secchio s) {
-        return (int) (this.capacita - s.capacita);
+        double value = this.capacita - s.capacita;
+        return (int) (value >= 0 ? Math.ceil(value) : Math.floor(value));
     }
 }
