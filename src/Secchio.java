@@ -6,6 +6,10 @@ public class Secchio implements Cloneable, Comparable<Secchio>, Serializable {
     private double volume;
     private double capacita;
 
+    public Secchio(double capacita) throws Exception{
+        this(0, capacita);
+    }
+
     public Secchio(double volume, double capacita) throws Exception{
         if((volume <= 0 || capacita <= 0) || volume > capacita) throw new Exception("Valori non validi");
         this.volume = volume;
