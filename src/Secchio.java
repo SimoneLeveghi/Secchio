@@ -1,5 +1,5 @@
 import com.google.gson.Gson;
-
+import java.util.Random;
 import java.io.Serializable;
 
 public class Secchio implements Cloneable, Comparable<Secchio>, Serializable {
@@ -72,6 +72,22 @@ public class Secchio implements Cloneable, Comparable<Secchio>, Serializable {
         double quantitaTravaso = Math.min(qty, volume);
         this.volume -= quantitaTravaso;
         s.riempi(quantitaTravaso);
+    }
+
+    public static Secchio generaSecchioRandom() {
+        Random r = new Random();
+        double capacita = r.nextDouble() * 100D;
+        double volume = r.nextDouble() * capacita;
+        Secchio ret;
+        try {
+            ret = new Secchio(volume, capacita);
+        }
+        catch(Exception e) {
+            ret = null;
+        }
+
+        return ret;
+
     }
 
     @Override

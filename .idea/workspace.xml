@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fb0a765-1e77-4604-b990-43b05736a5ff" name="Changes" comment="Add overloaded constructor" />
+    <list default="true" id="7fb0a765-1e77-4604-b990-43b05736a5ff" name="Changes" comment="Fix method setVolume()" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706031134932</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add methods isPieno() and isVuoto()">
+      <created>1706031381463</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706031381463</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fix method setVolume()">
+      <created>1706031444127</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706031444127</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +122,8 @@
     <MESSAGE value="Add basic methods to class Secchio" />
     <MESSAGE value="Implemented methods riempi(), svuota(), travasa() and Interfaces Comparable, Serializable and Cloneable" />
     <MESSAGE value="Add overloaded constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add overloaded constructor" />
+    <MESSAGE value="Add methods isPieno() and isVuoto()" />
+    <MESSAGE value="Fix method setVolume()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix method setVolume()" />
   </component>
 </project>
