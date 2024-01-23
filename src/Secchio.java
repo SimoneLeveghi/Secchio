@@ -33,7 +33,8 @@ public class Secchio implements Cloneable, Comparable<Secchio>, Serializable {
         return capacita;
     }
 
-    public void setVolume(double volume) {
+    public void setVolume(double volume) throws Exception{
+        if(this.volume < 0 || this.volume > this.capacita) throw new Exception("Volume non valido");
         this.volume = volume;
     }
 
