@@ -37,6 +37,14 @@ public class Secchio implements Cloneable, Comparable<Secchio>, Serializable {
         this.volume = volume;
     }
 
+    public boolean isVuoto() {
+        return this.volume == 0;
+    }
+
+    public boolean isPieno() {
+        return this.volume == this.capacita;
+    }
+
     public double riempi() {
         double ret = volume;
         this.volume = this.capacita;
